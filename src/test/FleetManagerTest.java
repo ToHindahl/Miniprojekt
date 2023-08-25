@@ -23,6 +23,7 @@ public class FleetManagerTest {
         Vehicle vehicle = new Vehicle(123, "VW");
         fleetManager.addVehicleToFleet(vehicle);
         assert fleetManager.getVehicleDetails(123) == vehicle;
+        assert fleetManager.getVehicles().size() == 1;
     }
 
 
@@ -34,6 +35,7 @@ public class FleetManagerTest {
         Vehicle vehicle = new Vehicle(123, "VW");
         fleetManager.addVehicleToFleet(vehicle);
         assert fleetManager.addVehicleToFleet(vehicle) == false;
+        assert fleetManager.getVehicles().size() == 1;
     }
 
 
@@ -43,6 +45,7 @@ public class FleetManagerTest {
     @Test
     public void testAddVehicle3(){
         assert fleetManager.addVehicleToFleet(null) == false;
+        assert fleetManager.getVehicles().size() == 0;
     }
 
 
@@ -59,6 +62,7 @@ public class FleetManagerTest {
         assert fleetManager.getVehicleDetails(123) == vehicle;
         fleetManager.removeVehicleFromFleet(123);
         assert fleetManager.getVehicleDetails(123) == null;
+        assert fleetManager.getVehicles().size() == 0;
     }
 
     @Test
@@ -66,6 +70,7 @@ public class FleetManagerTest {
         Vehicle vehicle = new Vehicle(123, "VW");
         fleetManager.addVehicleToFleet(vehicle);
         assert fleetManager.removeVehicleFromFleet(123) == true;
+        assert fleetManager.getVehicles().size() == 0; 
     }
 
 }

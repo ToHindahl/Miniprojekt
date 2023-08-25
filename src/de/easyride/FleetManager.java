@@ -9,6 +9,10 @@ import java.util.List;
 import static java.util.Arrays.stream;
 
 public class FleetManager implements FleetManagerInterface {
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
     /**
      * Zeigt die Fahrzeug Informationen an
      * <p>

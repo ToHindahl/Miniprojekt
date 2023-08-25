@@ -24,7 +24,10 @@ public interface FleetManagerInterface {
 
     /**
      * Entfernt ein Fahrzeug aus der Flotte
-     * @param vehicleId 
+     *
+     * Testfall: Wenn das Auto Entfernt dann muss es aus der Liste entfernt sein
+     *
+     * @param vehicleId ID des zu entfernendes Fahrzeug
      */
     boolean removeVehicleFromFleet(int vehicleId);
 
