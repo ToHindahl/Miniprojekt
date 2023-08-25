@@ -11,7 +11,7 @@ public interface FleetManagerInterface {
      *
      * @param vehicleId Die ID des Fahrzeuges
      */
-    void viewVehicleDetails(int vehicleId);
+    Vehicle getVehicleDetails(int vehicleId);
 
     /**
      * Fügt Fahrzeuge zu der Flotte hinzu
@@ -20,12 +20,12 @@ public interface FleetManagerInterface {
      *
      * @param vehicle Das hinzufügende Fahrzeug
      */
-    Vehicle addVehicleToFleet(Vehicle vehicle);
+    boolean addVehicleToFleet(Vehicle vehicle);
 
     /**
      * Entfernt ein Fahrzeug aus der Flotte
      * @param vehicleId 
      */
-    void removeVehicleFromFleet(int vehicleId);
+    boolean removeVehicleFromFleet(int vehicleId);
 
 }
